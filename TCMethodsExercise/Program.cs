@@ -37,5 +37,25 @@ namespace TCMethodsExercise
             Console.WriteLine($"That's when it all started to feel strange, and {name} woke up. \"I've really got to stop falling asleep playing games!\" {name} chuckled.");
             Console.WriteLine("THE END, End, end...");
         }
+
+        public static int Add(int x, int y)
+        {
+            return x+y;
+        }
+
+        public static int Sub(int x, int y)
+        {
+            return x-y;
+        }
+
+        public static int Multi(int x, int y)
+        {
+            return x*y;
+        }
+
+        public static int Div(int x, int y)
+        {
+            return x/y;
+        }
     }
 }
