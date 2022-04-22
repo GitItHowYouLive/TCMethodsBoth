@@ -6,7 +6,8 @@ namespace TCMethodsExercise
     {
         static void Main(string[] args)
         {
-            GatherInfo();
+            //GatherInfo();
+            Console.WriteLine(Div(250, 10, 5, 1));
         }
 
         public static void GatherInfo()
@@ -38,24 +39,52 @@ namespace TCMethodsExercise
             Console.WriteLine("THE END, End, end...");
         }
 
-        public static int Add(int x, int y)
+        public static int Add(params int[] nums)
         {
-            return x+y;
+            int total = 0;
+
+            foreach (int num in nums)
+            {
+                total += num;
+            }
+
+            return total;
         }
 
-        public static int Sub(int x, int y)
+        public static int Sub(params int[] nums)
         {
-            return x-y;
+            int total = nums[0]*2;
+
+            foreach (int num in nums)
+            {
+                total -= num;
+            }
+
+            return total;
         }
 
-        public static int Multi(int x, int y)
+        public static int Multi(params int[] nums)
         {
-            return x*y;
+            int total = 1;
+
+            foreach (int num in nums)
+            {
+                total *= num;
+            }
+
+            return total;
         }
 
-        public static int Div(int x, int y)
+        public static int Div(params int[] nums)
         {
-            return x/y;
+            int total = nums[0] * nums[0];
+
+            foreach (int num in nums)
+            {
+                total /= num;
+            }
+
+            return total;
         }
     }
 }
